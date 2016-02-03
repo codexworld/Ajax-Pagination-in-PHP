@@ -112,6 +112,8 @@ class Pagination{
 			$this->currentPage = ($numPages - 1) * $this->perPage;
 		}
 		
+		$uriPageNum = $this->currentPage;
+		
 		$this->currentPage = floor(($this->currentPage/$this->perPage) + 1);
 
 		// Calculate the start and end numbers. 
@@ -127,7 +129,7 @@ class Pagination{
 
 		// Render the "previous" link
 		if  ($this->currentPage != 1){
-			$i = $this->currentPage - $this->perPage;
+			$i = $uriPageNum - $this->perPage;
 			if ($i == 0) $i = '';
 			$output .= $this->prevTagOpen 
 				. $this->getAJAXlink( $i, $this->prevLink )
