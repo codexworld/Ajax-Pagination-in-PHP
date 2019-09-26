@@ -1,14 +1,14 @@
 <?php
 /**
- * CodexWorld is a programming blog. Our mission is to provide the best online resources on programming and web development.
+ * Pagination Library by CodexWorld
  *
- * This Pagination class helps to integrate ajax pagination in PHP.
+ * This Pagination class helps to integrate pagination with Ajax in PHP.
  *
  * @class		Pagination
  * @author		CodexWorld
  * @link		http://www.codexworld.com
- * @contact		http://www.codexworld.com/contact-us
- * @version		1.0
+ * @license		http://www.codexworld.com/license
+ * @version		2.0
  */
 class Pagination{
 	var $baseURL		= '';
@@ -35,10 +35,10 @@ class Pagination{
 	var $numTagOpen		= '&nbsp;';
 	var $numTagClose	= '';
 	var $anchorClass	= '';
-	var $showCount      = true;
+	var $showCount      	= true;
 	var $currentOffset	= 0;
-	var $contentDiv     = '';
-    var $additionalParam= '';
+	var $contentDiv     	= '';
+    	var $additionalParam	= '';
     
 	function __construct($params = array()){
 		if (count($params) > 0){
@@ -187,4 +187,3 @@ class Pagination{
 			   . $text .'</a>';
 	}
 }
-?>
